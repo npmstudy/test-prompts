@@ -1,18 +1,15 @@
 import { expect, test } from "vitest";
-
 import prompt from "prompts";
 
-const { prompts } = prompt;
-
-test("should work as expected", () => {
+test("should work as expected", async () => {
   let injected = [1, 2];
   prompt.inject(injected);
 
-  prompt({ type: "text", name: "a", message: "a message" }).then((foo) => {
-    expect(foo.a).toBe(1);
+  // first round
+  const foo = await prompt({ type: "text", name: "a", message: "a message" });
+  expect(foo.a).toBe(1);
 
-    prompt({ type: "text", name: "b", message: "a message" }).then((bar) => {
-      expect(bar.b).toBe(2);
-    });
-  });
+  // second round
+  const bar = await prompt({ type: "text", name: "b", message: "a message" });
+  expect(bar.b).toBe(2);
 });
