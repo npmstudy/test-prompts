@@ -1,0 +1,25 @@
+{
+  "name": "test-prompts",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "promptest": "index.js"
+  },
+  "engines": {
+    "node": "^20"
+  },
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "npmstudy",
+  "license": "ISC",
+  "dependencies": {
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "vitest": "^1.2.2"
+  }
+}
