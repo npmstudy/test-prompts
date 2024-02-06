@@ -4,8 +4,7 @@ https://github.com/terkelg/prompts
 
 creaite-vite 使用的是它
 
-在意 size 的人，推荐 prompts
-在意长期可维护性，推荐 inquirer
+在意 size 的人，推荐 prompts；在意长期可 维护性，推荐 inquirer
 
 ![](./compare.jpeg)
 
